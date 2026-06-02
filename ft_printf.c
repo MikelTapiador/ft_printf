@@ -6,19 +6,19 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:12:12 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/02 14:59:11 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:00:30 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_printf(char c)
+static int	ft_putchar_printf(char c)
 {
 	ft_putchar_fd(c, 1);
 	return (1);
 }
 
-int	ft_format(char c, va_list args)
+static int	ft_format(char c, va_list args)
 {
 	if (c == 'c')
 		return (ft_putchar_printf(va_arg(args, int)));
