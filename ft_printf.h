@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 10:21:36 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/02 14:16:10 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/03 09:30:26 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,5 @@ int		ft_putnbr_base(int nbr, char *base);
 int		ft_putnbr_base_un(unsigned int nbr, char *base);
 int		ft_putnbr_base_ptr(unsigned long nbr, char *base);
 int		ft_putpointer(void *ptr);
-int		ft_putchar_printf(char c);
-int		ft_format(char c, va_list args);
 
 #endif

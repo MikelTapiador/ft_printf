@@ -6,7 +6,7 @@
 /*   By: mtapiado <mtapiado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:12:12 by mtapiado          #+#    #+#             */
-/*   Updated: 2026/06/02 18:00:30 by mtapiado         ###   ########.fr       */
+/*   Updated: 2026/06/03 10:57:08 by mtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,16 @@ int	ft_printf(char const *format, ...)
 
 	i = 0;
 	count = 0;
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+				break ;
 			count = count + ft_format(format[i], args);
 		}
 		else
